@@ -10,7 +10,7 @@ public class EmployeePayrollService
 {
 	private List<EmplyoeeData> employePayrollList = new ArrayList<EmplyoeeData>();
 	Scanner scanner = new Scanner(System.in);
-	private static final String FILE_PATH = "c://Users//malij//OneDrive//Desktop//payroll-file.txt";
+	private static final String FILE_PATH = "C:\\Users\\HP\\OneDrive\\Desktop\\PayRoll.txt";
 
 	public void readEmployeeDataFromConsole() 
 	{
@@ -43,13 +43,11 @@ public class EmployeePayrollService
 		});
 		try {
 			Files.write(Paths.get(FILE_PATH), empBuffer.toString().getBytes());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		} catch (IOException e) 
+		{
 			e.printStackTrace();
 		}
 	}
-
-	//method to create file if file doesn't exist
 	private void checkFile() 
 	{
 		File file = new File(FILE_PATH);
